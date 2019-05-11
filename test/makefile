@@ -1,5 +1,5 @@
 CC=g++
-CFLAGS=-O3 -m64 -std=c++11 -I ../libmorton/include/
+CFLAGS=-O3 -m64 -std=c++11 -I ../libmorton/include/libmorton/
 
 all: test bmi2
 

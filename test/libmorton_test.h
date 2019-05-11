@@ -20,9 +20,9 @@
 
 // Load libraries we're going to test
 #include "morton_LUT_generators.h"
-#include "../libmorton/include/morton2D.h"
-#include "../libmorton/include/morton3D.h"
-#include "../libmorton/include/morton.h"
+#include "../libmorton/include/libmorton/morton2D.h"
+#include "../libmorton/include/libmorton/morton3D.h"
+#include "../libmorton/include/libmorton/morton.h"
 
 template <typename morton, typename coord>
 struct encode_f_2D_wrapper {
@@ -117,7 +117,7 @@ void control_decode(uint64_t encoding, T&... fields) {
 template <typename valtype>
 inline string getBitString(valtype val) {
 	// bitset needs size to be known at runtime, and introducing boost dependency
-	// for dynamic bitsets is undesirable, so we get crazy and cut the relevant bits. 
+	// for dynamic bitsets is undesirable, so we get crazy and cut the relevant bits.
 	// NASTY STUFF Don't try this at home kids
 	std::bitset<128> bs(val); // we make the bitset a max of 128
 	std::string s = bs.to_string(); // stringify it
