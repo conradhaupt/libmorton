@@ -8,7 +8,7 @@ project(
   LANGUAGES C CXX)
 
 set(LIBMORTON_INCLUDE_DIR
-    ${CMAKE_CURRENT_SOURCE_DIR}/libmorton/include/libmorton)
+    ${CMAKE_CURRENT_SOURCE_DIR}/libmorton/include)
 
 add_library(libmorton INTERFACE)
 
